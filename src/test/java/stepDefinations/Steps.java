@@ -17,6 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
@@ -72,7 +73,7 @@ public class Steps extends BaseClass{
 		driver.quit();
 	}
 	
-	@After(order =1)
+	@AfterStep(order=1)
 	public void tearDown(Scenario scenario) {
 		//if (scenario.isFailed())	{
 			//take screenshots
