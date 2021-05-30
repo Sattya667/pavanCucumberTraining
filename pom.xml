@@ -161,7 +161,7 @@
 	                                <includes>**/test-output/**</includes>
 	                            </fileset>
 	                            <fileset>
-	                                <directory>C:\Users\Sibu\.jenkins\workspace\pavanCucumberTraining</directory>
+	                                <directory>${basedir}</directory>
 	                                <includes>**/target/**</includes>
 	                            </fileset>
 	                        </filesets>
