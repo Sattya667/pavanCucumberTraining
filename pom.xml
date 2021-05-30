@@ -143,6 +143,32 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+	            <artifactId>maven-clean-plugin</artifactId>
+	            <version>3.0.0</version>
+	            <executions>
+	                <execution>
+	                    <id>auto-clean</id>
+	                    <phase>clean</phase>
+	                    <goals>
+	                        <goal>clean</goal>
+	                    </goals>
+	                    <configuration>
+	                        <filesets>
+	                            <fileset>
+	                                <directory>C:\Users\Sibu\.jenkins\workspace\pavanCucumberTraining</directory>
+	                                <includes>**/test-output/**</includes>
+	                            </fileset>
+	                            <fileset>
+	                                <directory>C:\Users\Sibu\.jenkins\workspace\pavanCucumberTraining</directory>
+	                                <includes>**/target/**</includes>
+	                            </fileset>
+	                        </filesets>
+	                    </configuration>
+	                </execution>
+	            </executions>
+        </plugin>
 
 			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
 				<version>3.0.0-M3</version> <executions> <execution> <goals> <goal>integration-test</goal> 
