@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 					".//features/login.feature"},
 		glue = "stepDefinations",
 		monochrome=true,
-		//tags= "@sanity",
+		tags= "@sanity",
 		plugin = {"pretty",
 				"html:Reports",
 					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
