@@ -102,6 +102,20 @@ public class BaseClass {
         }
         return driver;
     }
+	
+public static Properties readData() {
+        Properties objProp = new Properties();
+        try {
+            String env = System.getProperty("env");
+            File file = new File("TestSettings.properties");
+            FileInputStream fileInput = null;
+            fileInput = new FileInputStream(file);
+            objProp.load(fileInput);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return objProp;
+    }
 
 
     //Created for generating random string for Unique email
